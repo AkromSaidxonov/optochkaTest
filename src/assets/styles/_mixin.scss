@@ -1,0 +1,39 @@
+@mixin flex($jc: flex-start) {
+  display: flex;
+  align-items: center;
+  justify-content: $jc;
+  flex-wrap: wrap;
+}
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin resposive($breackpiont) {
+  @if $breackpiont == phone {
+    @media (max-width: 576px) {
+      @content;
+    }
+  }
+  @if $breackpiont == phoneTwo {
+    @media (max-width: 400px) {
+      @content;
+    }
+  }
+  @if $breackpiont == lg-desktop {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  }
+  @if $breackpiont == tab {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
+  @if $breackpiont == desktop {
+    @media (max-width: 992px) {
+      @content;
+    }
+  }
+}

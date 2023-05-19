@@ -5,10 +5,12 @@ import "./assets/styles/main.scss";
 
 //
 import { BrowserRouter } from "react-router-dom";
-import { Provider } from "react-redux";
+import { Context } from "./components/store/context.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
-    <App />
+    <Context>
+      <App />
+    </Context>
   </BrowserRouter>
 );

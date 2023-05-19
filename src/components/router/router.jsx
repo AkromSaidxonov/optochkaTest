@@ -1,40 +1,40 @@
 import React, { lazy } from "react";
-// const Main = lazy(() => import("../../pages/Home/Main/Main"));
+const Burgers = lazy(() => import("../../page/Burgers/Burgers"));
 
 export const routes = [
   {
     key: "1",
     path: "/",
-    element: "",
-    role: [],
+    element: <Burgers/>,
+    role: ["user"],
     extraRoute: null,
   },
   {
     key: "2",
     path: "/meals",
     element: "",
-    role: [],
+    role: ["user"],
     extraRoute: null,
   },
   {
     key: "3",
     path: "/sandwiches",
     element: "",
-    role: [],
+    role: ["user"],
     extraRoute: null,
   },
   {
     key: "4",
     path: "/sides",
     element: "",
-    role: [],
+    role: ["user"],
     extraRoute: null,
   },
   {
     key: "4",
     path: "/drinks",
     element: "",
-    role: [],
+    role: ["user"],
     extraRoute: null,
   },
 ];

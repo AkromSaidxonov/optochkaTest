@@ -1,22 +1,34 @@
 import React, { Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 import { routes } from "./router";
+import SearchBar from "../../page/components/searchBar/SearchBar";
+import Order from "../../page/Orders/Order";
 
-function indexRoute() {
+//
+import IpadSidebar from "../../page/components/ipadSidebar/IpadSidebar";
+
+function IndexRoute() {
   const RoutesItems = routes
-    .filter((route) => route?.role?.includes([]))
+    .filter((route) => route?.role?.includes("user"))
     .map((item) => (
-      <Route path={item.path} key={item.key} element={<item.element />}>
+      <Route path={item.path} key={item.key} element={item.element}>
         {item.extraRoute?.map((item) => (
-          <Route path={item.path} key={item.key} element={<item.element />} />
+          <Route path={item.path} key={item.key} element={item.element} />
         ))}
       </Route>
     ));
   return (
     <Suspense fallback>
-      <Routes>{RoutesItems}</Routes>
+      <section className="router container">
+        <IpadSidebar />
+        <div className="router__item">
+          <SearchBar />
+          <Routes>{RoutesItems}</Routes>
+        </div>
+        <Order />
+      </section>
     </Suspense>
   );
 }
 
-export default indexRoute;
+export default IndexRoute;

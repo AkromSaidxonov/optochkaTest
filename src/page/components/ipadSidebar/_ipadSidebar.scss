@@ -1,0 +1,41 @@
+.ipadSidebar {
+//   width: 158px;
+  flex-direction: column;
+  @include flex(start);
+
+  &__back-button {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: $tyColor;
+    margin-top: 20px;
+  }
+  &__logo {
+    // margin-top: 12.5px;
+    width: 102px;
+    height: 102px;
+    @include center();
+  }
+  &__links-item {
+    @include center();
+    flex-direction: column;
+    padding: 15px 10px;
+    gap: 10px;
+    width: 110px;
+    height: 95px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    margin-bottom: 20px;
+    background: $tyColorWhite;
+    color: $linkColor;
+    p {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+  .activeLink {
+    background: $mainColor;
+    color: $tyColorWhite;
+  }
+}

@@ -1,0 +1,11 @@
+.router {
+  //   width: 100%;
+  @include flex();
+  align-items: normal;
+  &__item {
+    margin: 30px 22px 0 22px;
+    @include flex();
+    flex: 1;
+    align-items: normal;
+  }
+}

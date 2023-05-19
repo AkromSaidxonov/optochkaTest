@@ -1,0 +1,60 @@
+.searchBar {
+  width: 100%;
+  z-index: 1000;
+  position: relative;
+
+  form {
+    // width: 828px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 11px 30px;
+    gap: 10px;
+    background: $tyColorWhite;
+    box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.02);
+    border-radius: 10px;
+    color: $tyColor2;
+    input {
+      width: 100%;
+      outline: none;
+      border: none;
+      ::placeholder {
+        color: $tyColor2;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+      }
+    }
+  }
+  &__cart {
+    width: 100%;
+    max-height: 300px;
+    padding: 20px 20px;
+    background: $tyColorWhite;
+    box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.02);
+    margin-top: 5px;
+    z-index: 1000;
+    position: absolute;
+    border-radius: 10px;
+    overflow-y: auto;
+  }
+  &__cart-item {
+    @include flex();
+    img {
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+    }
+    p {
+      font-weight: 500;
+      margin-left: 15px;
+    }
+    span {
+      margin-left: 20px;
+      color: $mainColor;
+      font-weight: 600;
+      cursor: pointer;
+    }
+  }
+}

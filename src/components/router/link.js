@@ -1,11 +1,17 @@
-import { burger, sendwiches, sides, frame, meals } from "../../assets/img/icon";
+import {
+  burger,
+  sandwiches,
+  sides,
+  frame,
+  meals,
+} from "../../assets/img/icon/icon";
 
 export const link = [
   {
     id: 1,
     icon: burger,
     name: "Burgers",
-    url: "/burgers",
+    url: "/",
   },
   {
     id: 2,
@@ -15,7 +21,7 @@ export const link = [
   },
   {
     id: 3,
-    icon: sendwiches,
+    icon: sandwiches,
     name: "Sandwiches",
     url: "/sandwiches",
   },

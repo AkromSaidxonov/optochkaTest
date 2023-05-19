@@ -1,0 +1,48 @@
+.burgers {
+  //   width: 100%;
+  margin-top: 30px;
+  &__cart {
+    @include flex();
+    flex-wrap: wrap;
+  }
+  &__cartItem {
+    cursor: pointer;
+    @include center();
+    text-align: center;
+    flex-direction: column;
+    padding: 20px 10px;
+    gap: 10px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    width: 161.67px;
+    height: 250px;
+    background: $tyColorWhite;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.02);
+    &--img {
+      width: 122px;
+      height: 122px;
+      img {
+        width: 105px;
+        height: 90px;
+      }
+    }
+    &--body {
+      width: 141.67px;
+      height: 87px;
+      gap: 10px;
+      span {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color: $tyColor;
+      }
+      p {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        color: $tyColor;
+        margin-top: 10px;
+      }
+    }
+  }
+}

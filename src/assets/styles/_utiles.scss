@@ -4,10 +4,6 @@
 //   padding: 0 10px;
 // }
 
-
-
-
-
 @function bp($bp) {
   @return map-get($breakpoints, $bp);
 }
@@ -81,4 +77,3 @@ $container-sizes: (
     }
   }
 }
-

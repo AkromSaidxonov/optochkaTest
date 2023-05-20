@@ -46,7 +46,9 @@
       }
     }
   }
-  @include resposive(phoneTwo) {
+  @include resposive(phone) {
+    margin-top: 0px;
+
     &__cart {
       @include flex();
       flex-wrap: wrap;

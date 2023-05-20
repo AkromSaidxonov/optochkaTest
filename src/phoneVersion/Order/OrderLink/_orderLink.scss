@@ -2,7 +2,7 @@
   display: none;
   width: 100%;
   position: fixed;
-  bottom: 20px;
+  top: 712px;
   left: 20px;
   &__item {
     width: 358px;
@@ -36,5 +36,8 @@
   }
 }
 .orderLinkActive {
-  display: block;
+  display: none;
+  @include resposive(phone) {
+    display: block;
+  }
 }

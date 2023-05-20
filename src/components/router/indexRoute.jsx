@@ -21,16 +21,10 @@ function IndexRoute() {
   return (
     <Suspense fallback>
       <section className="router container">
-        <div className="router__sidebar">
-          <IpadSidebar />
-        </div>
-        <div className="router__phoneSidebar">
-          <IpadSidebar />
-        </div>
+        <IpadSidebar />
         <div className="router__item">
-          <div className="router__searchBar">
             <SearchBar />
-          </div>
+ 
           <Routes>{RoutesItems}</Routes>
         </div>
 

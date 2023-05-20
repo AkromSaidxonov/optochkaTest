@@ -2,7 +2,9 @@ import React, { lazy } from "react";
 const Burgers = lazy(() => import("../../page/Burgers/Burgers"));
 const Meals = lazy(() => import("../../page/Meals/Meals"));
 const NotFound = lazy(() => import("../error/404/NotFound"));
-
+const CheckOut = lazy(() =>
+  import("../../phoneVersion/Order/CheckOut/CheckOut")
+);
 export const routes = [
   {
     key: "0",
@@ -43,6 +45,13 @@ export const routes = [
     key: "4",
     path: "/drinks",
     element: "",
+    role: ["user"],
+    extraRoute: null,
+  },
+  {
+    key: "5",
+    path: "/orderCheckout",
+    element: <CheckOut />,
     role: ["user"],
     extraRoute: null,
   },

@@ -16,7 +16,7 @@ const OrderLink = () => {
     if (state.length === 0) {
       navigate("/");
     }
-  }, []);
+  }, [state]);
   const navigateCheckout = () => {
     navigate("/orderCheckout");
   };

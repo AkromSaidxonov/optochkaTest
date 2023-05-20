@@ -50,14 +50,18 @@ const CheckOut = () => {
     </section>
   ));
   return (
-    <aside className="checkout container">
+    <aside
+      className={`${
+        state.length === 0 ? "" : "activeCheckOutPage"
+      } checkout container`}
+    >
       <div className="checkout__header">
-        <h3>
+        <div className="checkout__header--checkout">
           <span>
             <i class="fa-solid fa-chevron-left"></i>
-          </span>{" "}
-          Checkout
-        </h3>
+          </span>
+          <h3>Checkout</h3>
+        </div>
         <i onClick={removeAll} class="fa-regular fa-trash-can"></i>
       </div>
       {orderCart}

@@ -29,7 +29,7 @@ export const routes = [
   },
   {
     key: "3",
-    path: "/sandwiches",
+    path: "/sandwiche",
     element: "",
     role: ["user"],
     extraRoute: null,

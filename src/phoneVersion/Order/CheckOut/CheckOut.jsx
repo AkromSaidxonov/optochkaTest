@@ -79,9 +79,9 @@ const CheckOut = () => {
       </div>
       {orderCart}
 
-      <div className="orderLink__item">
+      <div className="checkout__item">
         <p>${total.toString().slice(0, 5)}</p>
-        <div className="orderLink__item--peyment" onClick={handlePay}>
+        <div className="checkout__item--peyment" onClick={handlePay}>
           <span>Pay</span>
           <i className="fa-solid fa-chevron-right"></i>
         </div>

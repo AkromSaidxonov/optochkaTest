@@ -1,9 +1,3 @@
-// .container {
-//   width: 1140px;
-//   margin: 0 auto;
-//   padding: 0 10px;
-// }
-
 @function bp($bp) {
   @return map-get($breakpoints, $bp);
 }

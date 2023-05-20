@@ -105,11 +105,11 @@
       cursor: pointer;
     }
   }
-  &__total {
-    position: fixed;
-    top: 780px;
-    width: 289px;
+  &__item {
+    width: 358px;
     height: 48px;
+    position: fixed;
+    top: 712px;
 
     @include flex(space-between);
     padding: 12px 10px 12px 20px;

@@ -4,6 +4,8 @@
   position: fixed;
   top: 712px;
   left: 20px;
+  z-index: 10000000;
+
   &__item {
     width: 358px;
     height: 48px;

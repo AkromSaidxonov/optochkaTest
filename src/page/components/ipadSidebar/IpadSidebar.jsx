@@ -5,6 +5,7 @@ import { link } from "../../../components/router/link";
 
 const IpadSidebar = () => {
   const location = useLocation();
+
   const linkItems = link.map((item) => (
     <Link
       to={item.url}
@@ -17,6 +18,7 @@ const IpadSidebar = () => {
       <p>{item.name}</p>
     </Link>
   ));
+
   return (
     <aside className="ipadSidebar">
       <div className="ipadSidebar__back-button">

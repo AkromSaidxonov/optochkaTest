@@ -5,7 +5,7 @@ import { Cartcontext } from "../../components/store/context";
 const Burgers = () => {
   const Globalstate = useContext(Cartcontext);
   const dispatch = Globalstate.dispatch;
-  const state = Globalstate.state;
+
 
   const handleAddToCart = (value) => {
     const addData = {
@@ -20,7 +20,6 @@ const Burgers = () => {
     };
     dispatch(addData);
   };
-  console.log(state);
 
   const burgersData = food.map((item) => (
     <div

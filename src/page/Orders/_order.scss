@@ -1,6 +1,139 @@
 .order {
+  width: 0;
+  transition: 0.2s ease-in;
+  transform: translateX(50%);
+  overflow: hidden;
+  &__header {
+    @include flex(space-between);
+    margin-bottom: 20px;
+
+    h3 {
+      width: 103px;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 24px;
+    }
+    i {
+      cursor: pointer;
+    }
+  }
+  &__cart {
+    @include center();
+    position: relative;
+    flex-direction: column;
+    padding: 20px 0px 20px;
+    width: 289px;
+    height: 130px;
+    background: $tyColorWhite;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+    margin-bottom: 10px;
+    &--item {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+    }
+    &--img {
+      width: 72px;
+      height: 72px;
+      img {
+        width: 62.51px;
+        height: 53.11px;
+      }
+    }
+    &--itemName {
+      width: 144px;
+      height: 40px;
+      p {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        color: $linkColor;
+      }
+    }
+    &--price {
+      width: 43px;
+      height: 17px;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 17px;
+      color: $linkColor;
+    }
+    &--action {
+      @include center();
+      button {
+        @include center();
+
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: $mainColor;
+        color: $tyColorWhite;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        .fa-window-minimize {
+          margin-top: -10px;
+        }
+      }
+      span {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        color: $linkColor;
+        margin: 0 30px;
+      }
+    }
+    &--x {
+      font-size: 15px;
+      position: absolute;
+      right: 8.33%;
+      bottom: 8.33%;
+      color: $colorCencel;
+      cursor: pointer;
+    }
+  }
+  &__total {
+    position: fixed;
+    top: 780px;
+    width: 289px;
+    height: 48px;
+
+    @include flex(space-between);
+    padding: 12px 10px 12px 20px;
+    gap: 10px;
+    background-color: $mainColor;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+    p {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 19px;
+      color: $tyColorWhite;
+    }
+    &--peyment {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      color: $tyColorWhite;
+      cursor: pointer;
+      span {
+        margin-right: 10px;
+      }
+      .fa-chevron-right {
+        font-size: 15px;
+      }
+    }
+  }
+}
+.true {
   width: 309px;
+  display: block;
+  transition: 0.2s ease-in;
   background-color: $tyColorWhite;
   padding: 34px 10px 20px;
   gap: 20px;
+  position: relative;
+  .order__header {
+    opacity: 1;
+  }
 }

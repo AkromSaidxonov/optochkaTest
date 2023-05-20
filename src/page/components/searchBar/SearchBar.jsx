@@ -1,11 +1,30 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { food } from "../../../components/mock/foods";
+import { Cartcontext } from "../../../components/store/context";
 
 const SearchBar = () => {
   const [query, setQuery] = useState("");
+
+  const Globalstate = useContext(Cartcontext);
+  const dispatch = Globalstate.dispatch;
   const handleOnchange = (e) => {
     setQuery(e.target.value.toLowerCase());
   };
+
+  const handleAddToCart = (value) => {
+    const addData = {
+      type: "ADD",
+      payload: {
+        id: value.id,
+        name: value.name,
+        imgUrl: value.imgUrl,
+        price: value.price,
+        quantity: 1,
+      },
+    };
+    dispatch(addData);
+  };
+
   const searchResonse =
     query &&
     food
@@ -15,7 +34,7 @@ const SearchBar = () => {
           <img src={item.imgUrl} alt="img" />
           <p>{item.name}</p>
           <p>${item.price}</p>
-          <span>
+          <span onClick={handleAddToCart.bind(null, item)}>
             <i class="fa-solid fa-cart-shopping"></i>
           </span>
         </div>

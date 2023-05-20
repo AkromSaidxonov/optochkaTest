@@ -1,11 +1,28 @@
 .router {
-  //   width: 100%;
   @include flex();
   align-items: normal;
   &__item {
-    margin: 30px 22px 0 22px;
+    height: 100%;
+    margin: 30px 22px 0 32px;
     @include flex();
     flex: 1;
     align-items: normal;
+  }
+  &__phoneSidebar {
+    display: none;
+  }
+  @include resposive(phone) {
+    &__searchBar {
+      display: none;
+    }
+    &__sidebar {
+      display: none;
+    }
+    &__phoneSidebar {
+      display: block;
+    }
+    &__item{
+      margin: 0;
+    }
   }
 }

@@ -9,7 +9,10 @@
 
 //
 @import "../../components/router/router";
+@import "../../components/Allerts/Success/successAllert";
+@import "../../components/error/404/notFound";
 @import "../../page/components/ipadSidebar/ipadSidebar";
 @import "../../page/components/searchBar/searchBar";
 @import "../../page/Burgers/burgers";
+@import "../../page/Meals/meals";
 @import "../../page/Orders/order";

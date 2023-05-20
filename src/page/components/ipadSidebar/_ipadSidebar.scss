@@ -1,5 +1,4 @@
 .ipadSidebar {
-//   width: 158px;
   flex-direction: column;
   @include flex(start);
 
@@ -11,7 +10,6 @@
     margin-top: 20px;
   }
   &__logo {
-    // margin-top: 12.5px;
     width: 102px;
     height: 102px;
     @include center();
@@ -37,5 +35,41 @@
   .activeLink {
     background: $mainColor;
     color: $tyColorWhite;
+  }
+
+  @include resposive(phone) {
+    overflow: hidden;
+    &__logo {
+      display: none;
+    }
+    &__back-button {
+      display: none;
+    }
+    &__sidebar {
+      flex-direction: row;
+    }
+    &__links {
+      @include flex();
+      gap: 10px;
+      :nth-child(5) {
+        display: none;
+      }
+    }
+    &__links-item {
+      @include center();
+      flex-direction: column;
+      padding: 15px 10px;
+      gap: 10px;
+      width: 80px;
+      height: 85px;
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+      border-radius: 6px;
+
+      p {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+      }
+    }
   }
 }

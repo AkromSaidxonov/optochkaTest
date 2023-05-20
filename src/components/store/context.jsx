@@ -37,6 +37,8 @@ export const Context = (props) => {
         );
 
         return tempstate3;
+      case "REMOVE_ALL":
+        return (state = []);
 
       default:
         return state;

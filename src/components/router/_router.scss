@@ -1,6 +1,7 @@
 .router {
   @include flex();
   align-items: normal;
+  position: relative;
   &__item {
     height: 100%;
     margin: 30px 22px 0 32px;
@@ -8,6 +9,7 @@
     flex: 1;
     align-items: normal;
   }
+
   &__phoneSidebar {
     display: none;
   }

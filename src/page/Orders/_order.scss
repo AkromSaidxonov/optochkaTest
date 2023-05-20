@@ -124,6 +124,9 @@
       }
     }
   }
+  @include resposive(phone) {
+    display: none;
+  }
 }
 .true {
   width: 309px;

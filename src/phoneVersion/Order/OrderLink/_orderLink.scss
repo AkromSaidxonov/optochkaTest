@@ -1,0 +1,36 @@
+.orderLink {
+  width: 100%;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  &__item {
+    width: 358px;
+    height: 48px;
+
+    @include flex(space-between);
+    padding: 12px 10px 12px 20px;
+    gap: 10px;
+    background-color: $mainColor;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+    p {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 19px;
+      color: $tyColorWhite;
+    }
+    &--peyment {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      color: $tyColorWhite;
+      cursor: pointer;
+      span {
+        margin-right: 10px;
+      }
+      .fa-chevron-right {
+        font-size: 15px;
+      }
+    }
+  }
+}

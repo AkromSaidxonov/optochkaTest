@@ -5,7 +5,7 @@ const Order = () => {
   const Globalstate = useContext(Cartcontext);
   const state = Globalstate.state;
   const dispatch = Globalstate.dispatch;
-  
+
   const [isOpen, setIsOpen] = useState(false);
 
   const total = state.reduce((total, item) => {
@@ -72,8 +72,8 @@ const Order = () => {
         <div className="order__total">
           <p>${total.toString().slice(0, 5)}</p>
           <div className="order__total--peyment" onClick={handlePay}>
-            <span></span>
-            Pay <i class="fa-solid fa-chevron-right"></i>
+            <span>Pay</span>
+            <i class="fa-solid fa-chevron-right"></i>
           </div>
         </div>
       )}

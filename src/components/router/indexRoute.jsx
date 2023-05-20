@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import { routes } from "./router";
 import SearchBar from "../../page/components/searchBar/SearchBar";
 import Order from "../../page/Orders/Order";
+import OrderLink from "../../phoneVersion/Order/OrderLink/OrderLink";
 
 //
 import IpadSidebar from "../../page/components/ipadSidebar/IpadSidebar";
@@ -32,7 +33,12 @@ function IndexRoute() {
           </div>
           <Routes>{RoutesItems}</Routes>
         </div>
+
         <Order />
+
+        <div className="routrer__order-phone">
+          <OrderLink />
+        </div>
       </section>
     </Suspense>
   );

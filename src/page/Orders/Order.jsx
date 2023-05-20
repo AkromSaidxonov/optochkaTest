@@ -49,15 +49,15 @@ const Order = () => {
       </div>
       <div className="order__cart--action">
         <button onClick={() => decrease(item.quantity, item)}>
-          <i class="fa-solid fa-window-minimize"></i>
+          <i className="fa-solid fa-window-minimize"></i>
         </button>
         <span>{item.quantity}</span>
         <button onClick={() => increase(item)}>
-          <i class="fa-solid fa-plus"></i>
+          <i className="fa-solid fa-plus"></i>
         </button>
       </div>
       <div className="order__cart--x" onClick={() => remove(item)}>
-        <i class="fa-regular fa-circle-xmark"></i>
+        <i className="fa-regular fa-circle-xmark"></i>
       </div>
     </section>
   ));
@@ -65,7 +65,7 @@ const Order = () => {
     <aside className={` ${state.length > 0 ? "true" : "order"}`}>
       <div className="order__header">
         <h3>New order</h3>
-        <i onClick={removeAll} class="fa-regular fa-trash-can"></i>
+        <i onClick={removeAll} className="fa-regular fa-trash-can"></i>
       </div>
       {orderCart}
       {state.length > 0 && (
@@ -73,7 +73,7 @@ const Order = () => {
           <p>${total.toString().slice(0, 5)}</p>
           <div className="order__total--peyment" onClick={handlePay}>
             <span>Pay</span>
-            <i class="fa-solid fa-chevron-right"></i>
+            <i className="fa-solid fa-chevron-right"></i>
           </div>
         </div>
       )}

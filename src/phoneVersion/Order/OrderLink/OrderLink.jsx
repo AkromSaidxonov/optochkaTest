@@ -24,7 +24,7 @@ const OrderLink = () => {
         <p>${total.toString().slice(0, 5)}</p>
         <div className="orderLink__item--peyment" onClick={navigateCheckout}>
           <span>Checkout</span>
-          <i class="fa-solid fa-chevron-right"></i>
+          <i className="fa-solid fa-chevron-right"></i>
         </div>
       </div>
     </div>

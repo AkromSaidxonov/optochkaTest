@@ -50,15 +50,15 @@ const CheckOut = () => {
       </div>
       <div className="checkout__cart--action">
         <button onClick={() => decrease(item.quantity, item)}>
-          <i class="fa-solid fa-window-minimize"></i>
+          <i className="fa-solid fa-window-minimize"></i>
         </button>
         <span>{item.quantity}</span>
         <button onClick={() => increase(item)}>
-          <i class="fa-solid fa-plus"></i>
+          <i className="fa-solid fa-plus"></i>
         </button>
       </div>
       <div className="checkout__cart--x" onClick={() => remove(item)}>
-        <i class="fa-regular fa-circle-xmark"></i>
+        <i className="fa-regular fa-circle-xmark"></i>
       </div>
     </section>
   ));
@@ -71,11 +71,11 @@ const CheckOut = () => {
       <div className="checkout__header">
         <Link to="/" className="checkout__header--checkout">
           <span>
-            <i class="fa-solid fa-chevron-left"></i>
+            <i className="fa-solid fa-chevron-left"></i>
           </span>
           <h3>Checkout</h3>
         </Link>
-        <i onClick={removeAll} class="fa-regular fa-trash-can"></i>
+        <i onClick={removeAll} className="fa-regular fa-trash-can"></i>
       </div>
       {orderCart}
 
@@ -83,7 +83,7 @@ const CheckOut = () => {
         <p>${total.toString().slice(0, 5)}</p>
         <div className="orderLink__item--peyment" onClick={handlePay}>
           <span>Pay</span>
-          <i class="fa-solid fa-chevron-right"></i>
+          <i className="fa-solid fa-chevron-right"></i>
         </div>
       </div>
       <SuccessAlert open={isOpen} onClose={handleClose} />

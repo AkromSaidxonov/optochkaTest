@@ -14,7 +14,7 @@ const SuccessAlert = ({ open, onClose }) => {
     <div className="successAlert">
       <div className="successAlert__item">
         <div>
-          <i class="fa-solid fa-circle-check"></i>
+          <i className="fa-solid fa-circle-check"></i>
         </div>
         <div>
           <p>Payment Successful</p>

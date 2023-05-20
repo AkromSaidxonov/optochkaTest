@@ -23,7 +23,7 @@ const IpadSidebar = () => {
     <aside className="ipadSidebar">
       <div className="ipadSidebar__back-button">
         <span>
-          <i class="fa-solid fa-arrow-left"></i> Back
+          <i className="fa-solid fa-arrow-left"></i> Back
         </span>
       </div>
       <div className="ipadSidebar__logo">

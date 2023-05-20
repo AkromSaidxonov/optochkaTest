@@ -35,7 +35,7 @@ const SearchBar = () => {
           <p>{item.name}</p>
           <p>${item.price}</p>
           <span onClick={handleAddToCart.bind(null, item)}>
-            <i class="fa-solid fa-cart-shopping"></i>
+            <i className="fa-solid fa-cart-shopping"></i>
           </span>
         </div>
       ));
@@ -43,7 +43,7 @@ const SearchBar = () => {
   return (
     <div className="searchBar">
       <form>
-        <i class="fa-solid fa-magnifying-glass"></i>
+        <i className="fa-solid fa-magnifying-glass"></i>
         <input type="text" placeholder="Search" onChange={handleOnchange} />
       </form>
       {query && <div className="searchBar__cart">{searchResonse}</div>}

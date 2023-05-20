@@ -8,7 +8,7 @@ const OrderLink = () => {
     return total + item.price * item.quantity;
   }, 0);
   return (
-    <div className="orderLink">
+    <div className={` ${state.length > 0 ? "orderLinkActive" : "orderLink"}`}>
       <div className="orderLink__item">
         <p>${total.toString().slice(0, 5)}</p>
         <div className="orderLink__item--peyment">

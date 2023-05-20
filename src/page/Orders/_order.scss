@@ -140,6 +140,6 @@
     opacity: 1;
   }
   @include resposive(phone) {
-    display: none;
+    display: none !important;
   }
 }
